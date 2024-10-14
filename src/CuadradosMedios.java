@@ -1,29 +1,47 @@
 public class CuadradosMedios extends NumeroPseudoaleatorio{
 
-    int numero;
+    int calculo;
+    double numero;
+    String intercambio;
     public CuadradosMedios(){
         super();
-        numero=0;
+        numero=0.0;
+        calculo=0;
+        intercambio="";
+        
     }
-    public CuadradosMedios(int num){
-        this.numero=num;
+    public CuadradosMedios(Double num){
+        super(num);
+        calculo=0;
+        intercambio="";
     }
 
     
-    public int generarNumero(int num){
-        num= (int) Math.pow(num, 2);
+    public double generarNumero(double num){
+        //calculo= (int) Math.pow(num, 2);
         return num;
     }
-
-    public int generarNumero(){
-        numero=(int)Math.pow(numero, 2);
+    //genera un numero pseudoaleatorio, su valor
+    public double generarNumero(){
+        calculo=(int)Math.pow(numero, 2);
+        
+        if(calculo<10000000){
+            intercambio=String.format("%6d",calculo);
+            intercambio="0."+intercambio.substring(1,5);
+        }
+        else{
+            intercambio=String.valueOf(calculo);
+            intercambio="."+intercambio.substring(2,6);
+        }
+        
+        numero=Double.parseDouble(intercambio);
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(double numero) {
         this.numero = numero;
     }
-    public int getNumero(){
+    public double getNumero(){
         return numero;
     }
 }

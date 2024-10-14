@@ -3,5 +3,7 @@ public class Principal {
         //hacer programa con UI para numeros pseudoaleatorios
         NumeroPseudoaleatorio numero = new CuadradosMedios(8);
         System.out.println(numero.generarNumero());
+        VentanaPrincipal ventana= new VentanaPrincipal();
+        
     }
 }

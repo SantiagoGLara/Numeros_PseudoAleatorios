@@ -3,10 +3,10 @@ public class Principal {
         //hacer programa con UI para numeros pseudoaleatorios
         NumeroPseudoaleatorio numero = new CuadradosMedios();
         CuadradosMedios numero1 = new CuadradosMedios();
-        numero1.setNumero(2456.0);
+        numero1.setNumero(5735.0);
         System.out.println(numero1.generarNumero());
         VentanaPrincipal ventana= new VentanaPrincipal();
-        VentanaGeneracion ventana1= new VentanaGeneracion();
+        //VentanaGeneracion ventana1= new VentanaGeneracion();
         
     }
 }

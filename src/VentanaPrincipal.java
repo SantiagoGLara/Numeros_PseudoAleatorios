@@ -3,6 +3,9 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
 import java.awt.Font;
@@ -30,6 +33,18 @@ public class VentanaPrincipal extends JFrame{
         botonGenerar.setBorderPainted(false);
         botonGenerar.setOpaque(true);
 
+        botonGenerar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    dispose();
+                    new VentanaGeneracion();
+                } catch (Exception w) {
+                    w.printStackTrace();
+                }
+            }
+        });
+
         labelBienvenida=new JLabel("Bienvenido al Software Numeros Pseudoaleatorios");
         labelBienvenida.setFont(new Font("Arial", Font.BOLD, 24));
         
@@ -43,9 +58,10 @@ public class VentanaPrincipal extends JFrame{
         panelPrincipal.add(labelImagen,BorderLayout.CENTER);
 
         add(panelPrincipal);
-        setVisible(true);
-        setLocationRelativeTo(null);
         pack();
+        setLocationRelativeTo(null);
+        setVisible(true);
+        
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
     }

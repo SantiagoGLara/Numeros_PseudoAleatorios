@@ -6,6 +6,7 @@ import java.awt.Image;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
 import java.awt.Font;
+import java.awt.Color;
 
 public class VentanaPrincipal extends JFrame{
     JButton botonGenerar;
@@ -23,6 +24,11 @@ public class VentanaPrincipal extends JFrame{
         Image imagenBotonGenerarEscalada = IconoBotonGenerarOriginal.getImage().getScaledInstance(16, 16, java.awt.Image.SCALE_SMOOTH);
         ImageIcon iconoBotonGeneracionEscalado = new ImageIcon(imagenBotonGenerarEscalada);
         botonGenerar.setIcon(iconoBotonGeneracionEscalado);
+        botonGenerar.setBackground(Color.decode("#3498DB"));
+        botonGenerar.setForeground(Color.WHITE);
+        botonGenerar.setFocusPainted(false);
+        botonGenerar.setBorderPainted(false);
+        botonGenerar.setOpaque(true);
 
         labelBienvenida=new JLabel("Bienvenido al Software Numeros Pseudoaleatorios");
         labelBienvenida.setFont(new Font("Arial", Font.BOLD, 24));

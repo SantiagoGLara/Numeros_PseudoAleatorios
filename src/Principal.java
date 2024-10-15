@@ -6,6 +6,7 @@ public class Principal {
         numero1.setNumero(2456.0);
         System.out.println(numero1.generarNumero());
         VentanaPrincipal ventana= new VentanaPrincipal();
+        VentanaGeneracion ventana1= new VentanaGeneracion();
         
     }
 }

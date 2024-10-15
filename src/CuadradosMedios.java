@@ -21,7 +21,7 @@ public class CuadradosMedios extends NumeroPseudoaleatorio{
         //calculo= (int) Math.pow(num, 2);
         return num;
     }
-    //genera un numero pseudoaleatorio, su valor
+    //genera un numero pseudoaleatorio, decimal. para manipular con iteraciones multiplicar x10,0000S
     public double generarNumero(){
         calculo=(int)Math.pow(numero, 2);
         

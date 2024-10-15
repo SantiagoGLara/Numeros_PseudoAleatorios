@@ -25,13 +25,18 @@ public class CuadradosMedios extends NumeroPseudoaleatorio{
     public double generarNumero(){
         calculo=(int)Math.pow(numero, 2);
         
-        if(calculo<10000000){
-            intercambio=String.format("%6d",calculo);
-            intercambio="0."+intercambio.substring(1,5);
+        if(calculo<10000000 && calculo>1000000){
+            intercambio=String.format("%8d",calculo);
+            intercambio="0."+intercambio.substring(2,6).trim();
+        }
+        else if(calculo<1000000){
+            intercambio=String.format("%8d",calculo);
+            intercambio="0."+intercambio.substring(2,6).trim();
+
         }
         else{
             intercambio=String.valueOf(calculo);
-            intercambio="."+intercambio.substring(2,6);
+            intercambio="0."+intercambio.substring(2,6).trim();
         }
         
         numero=Double.parseDouble(intercambio);

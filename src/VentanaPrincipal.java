@@ -23,7 +23,7 @@ public class VentanaPrincipal extends JFrame{
         panelPrincipal=new JPanel(new BorderLayout());
         
         botonGenerar=new JButton("Iniciar Generación");
-        ImageIcon IconoBotonGenerarOriginal = new ImageIcon("reproducir2.png");
+        ImageIcon IconoBotonGenerarOriginal = new ImageIcon("4to\\Simulacion\\Numeros_PseudoAleatorios\\reproducir.png");
         Image imagenBotonGenerarEscalada = IconoBotonGenerarOriginal.getImage().getScaledInstance(16, 16, java.awt.Image.SCALE_SMOOTH);
         ImageIcon iconoBotonGeneracionEscalado = new ImageIcon(imagenBotonGenerarEscalada);
         botonGenerar.setIcon(iconoBotonGeneracionEscalado);
@@ -49,8 +49,9 @@ public class VentanaPrincipal extends JFrame{
         labelBienvenida.setFont(new Font("Arial", Font.BOLD, 24));
         
         
-        ImageIcon IconoImagenCentroOriginal=new ImageIcon("dados.jpg");
+        ImageIcon IconoImagenCentroOriginal=new ImageIcon("4to\\Simulacion\\Numeros_PseudoAleatorios\\dados.jpg");
         labelImagen=new JLabel(IconoImagenCentroOriginal);
+        labelImagen.setBounds(200, 100 ,1000, 1000);
         
         
         panelPrincipal.add(botonGenerar,BorderLayout.SOUTH);
